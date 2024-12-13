@@ -89,7 +89,12 @@ export function XTerm({ messages, typingSpeed = 100, lineDelay = 500 }: XTermPro
     return (
         <div
             ref={ref}
-            className="fixed inset-0 bg-t text-white p-8"
+            className="fixed inset-0 text-white ml-8 mt-8"
+            style={{
+                width: "100%",
+                whiteSpace: 'pre-wrap', // Ensure text wraps
+                wordWrap: 'break-word', // Allow breaking long words
+            }}
         />
     );
 }
